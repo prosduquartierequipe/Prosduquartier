@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Pros du Quartier | Jacob, Zakary & Noah - Entretien Extérieur</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement de la police Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        forest: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-200 selection:text-emerald-900">
+
+    <!-- Barre de navigation fixe -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo et nom de l'entreprise -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center shadow-md group-hover:bg-emerald-600 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 block leading-none">Les Pros du Quartier</span>
+                        <span class="text-xs font-medium text-emerald-700">Ostiguy • Robidoux • Simard</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Bureau -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#services" class="hover:text-emerald-700 transition-colors">Services & Tarifs</a>
+                    <a href="#calculateur" class="hover:text-emerald-700 transition-colors">Calculateur</a>
+                    <a href="#equipe" class="hover:text-emerald-700 transition-colors">Notre Équipe</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-emerald-700 text-white hover:bg-emerald-800 transition-all shadow-sm">
+                        Réserver maintenant
+                    </a>
+                </nav>
+
+                <!-- Bouton d'action rapide sur Mobile -->
+                <div class="flex md:hidden">
+                    <a href="#contact" class="px-4 py-2 rounded-xl bg-emerald-700 text-white text-sm font-semibold shadow-sm active:scale-95 transition-transform">
+                        Réserver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Hero (Bannière d'accueil) -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 text-white py-14 sm:py-24">
+        <!-- Motif décoratif subtil -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <circle cx="10" cy="20" r="30" fill="white" />
+                <circle cx="90" cy="80" r="40" fill="white" />
+            </svg>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Badge de confiance local -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-amber-300 text-xs sm:text-sm font-semibold mb-6 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                Service local 4 saisons dans votre voisinage
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
+                Trois jeunes motivés de votre quartier pour entretenir votre terrain <span class="text-amber-400">toute l'année !</span>
+            </h1>
+
+            <p class="mt-5 text-base sm:text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+                Un service fiable, rapide et abordable offert directement par vos voisins :
+            </p>
+
+            <!-- Noms des trois fondateurs mis en valeur -->
+            <div class="mt-6 flex flex-wrap justify-center gap-2.5 sm:gap-4">
+                <span class="px-4 py-2 rounded-xl bg-white/15 border border-white/20 text-white font-bold text-sm sm:text-base shadow-sm">
+                    👋 Jacob Ostiguy Rondeau
+                </span>
+                <span class="px-4 py-2 rounded-xl bg-white/15 border border-white/20 text-white font-bold text-sm sm:text-base shadow-sm">
+                    👋 Zakary Robidoux
+                </span>
+                <span class="px-4 py-2 rounded-xl bg-white/15 border border-white/20 text-white font-bold text-sm sm:text-base shadow-sm">
+                    👋 Noah Simard
+                </span>
+            </div>
+
+            <!-- Boutons d'appel à l'action -->
+            <div class="mt-9 flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0">
+                <a href="#contact" class="px-8 py-4 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold text-base sm:text-lg shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-0.5">
+                    Demander un service
+                </a>
+                <a href="#calculateur" class="px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold text-base sm:text-lg transition-all">
+                    Calculer mon estimation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos Services & Tarifs -->
+    <section id="services" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <span class="text-emerald-700 font-bold tracking-wider uppercase text-xs sm:text-sm">Tarifs simples et transparents</span>
+            <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">Nos Services & Tarifs</h2>
+            <p class="mt-3 text-slate-600 text-base sm:text-lg">
+                Que ce soit pour l'automne, l'hiver ou l'été, nous avons l'équipement et l'énergie nécessaires pour garder votre propriété impeccable.
+            </p>
+        </div>
+
+        <!-- Grille des 4 services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Carte 1 : Feuilles -->
+            <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-amber-300 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-3xl shadow-inner">
+                            🍂
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold border border-amber-200">
+                            Automne / Printemps
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Ramassage des feuilles</h3>
+                    <p class="mt-2.5 text-slate-600 text-sm leading-relaxed">
+                        Râtelage complet et nettoyage soigné de votre pelouse, plates-bandes et entrée pour un terrain propre avant l'hiver ou au printemps.
+                    </p>
+                </div>
+                <div class="mt-6 pt-5 border-t border-slate-100">
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-extrabold text-slate-900">25 $</span>
+                        <span class="text-sm text-slate-500 font-medium">/ terrain</span>
+                    </div>
+                    <button onclick="selectServiceFromCard('leaves')" class="mt-4 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-700 text-slate-800 hover:text-white font-semibold text-sm transition-colors">
+                        Ajouter à mon estimation
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 2 : Lavage de bacs -->
+            <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-3xl shadow-inner">
+                            🫧
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-sky-50 text-sky-800 text-xs font-bold border border-sky-200">
+                            Toute l'année
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Lavage de bacs</h3>
+                    <p class="mt-2.5 text-slate-600 text-sm leading-relaxed">
+                        Nettoyage en profondeur et désinfection de vos bacs à <strong>poubelle, recyclage ou compost</strong> pour éliminer les saletés et mauvaises odeurs.
+                    </p>
+                </div>
+                <div class="mt-6 pt-5 border-t border-slate-100">
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-extrabold text-slate-900">20 $</span>
+                        <span class="text-sm text-slate-500 font-medium">/ bac</span>
+                    </div>
+                    <button onclick="selectServiceFromCard('bins')" class="mt-4 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-700 text-slate-800 hover:text-white font-semibold text-sm transition-colors">
+                        Ajouter un bac
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 3 : Déneigement -->
+            <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-3xl shadow-inner">
+                            ❄️
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-800 text-xs font-bold border border-indigo-200">
+                            Hiver
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Déneigement résidentiel</h3>
+                    <p class="mt-2.5 text-slate-600 text-sm leading-relaxed">
+                        Pelleterie efficace de votre entrée de cour, de votre trottoir et de vos escaliers pour des déplacements sécuritaires après chaque bordée.
+                    </p>
+                </div>
+                <div class="mt-6 pt-5 border-t border-slate-100">
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-extrabold text-slate-900">20 $</span>
+                        <span class="text-sm text-slate-500 font-medium">/ visite</span>
+                    </div>
+                    <button onclick="selectServiceFromCard('snow')" class="mt-4 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-700 text-slate-800 hover:text-white font-semibold text-sm transition-colors">
+                        Ajouter à mon estimation
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 4 : Gazon / Haie -->
+            <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-3xl shadow-inner">
+                            🌿
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                            Été
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Tonte de gazon ou taille de haie</h3>
+                    <p class="mt-2.5 text-slate-600 text-sm leading-relaxed">
+                        Coupe nette de votre pelouse ou taille droite de vos haies de cèdres. <span class="italic text-slate-500">Le prix final varie selon la largeur et la grandeur (estimation gratuite sur place).</span>
+                    </p>
+                </div>
+                <div class="mt-6 pt-5 border-t border-slate-100">
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-xs font-bold uppercase text-emerald-700 mr-1">À partir de</span>
+                        <span class="text-3xl font-extrabold text-slate-900">50 $</span>
+                    </div>
+                    <button onclick="selectServiceFromCard('lawn')" class="mt-4 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-700 text-slate-800 hover:text-white font-semibold text-sm transition-colors">
+                        Ajouter à mon estimation
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Calculateur d'estimation rapide -->
+    <section id="calculateur" class="py-16 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-amber-300 font-bold tracking-wider uppercase text-xs sm:text-sm">Outil interactif</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold">Calculateur d'estimation rapide</h2>
+                <p class="mt-2 text-emerald-100 text-sm sm:text-base">
+                    Cochez les services dont vous avez besoin pour connaître instantanément le coût estimé.
+                </p>
+            </div>
+
+            <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <div class="space-y-4">
+                    
+                    <!-- Option 1 : Feuilles -->
+                    <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 hover:border-emerald-500 cursor-pointer transition-all bg-slate-50/50">
+                        <div class="flex items-center gap-3.5">
+                            <input type="checkbox" id="calc-leaves" onchange="updateEstimate()" class="w-6 h-6 rounded-lg text-emerald-600 focus:ring-emerald-500 border-slate-300 cursor-pointer">
+                            <div>
+                                <span class="font-bold text-slate-900 block text-base sm:text-lg">🍂 Ramassage des feuilles</span>
+                                <span class="text-xs sm:text-sm text-slate-500">Nettoyage complet du terrain</span>
+                            </div>
+                        </div>
+                        <span class="font-extrabold text-lg sm:text-xl text-emerald-700">25 $</span>
+                    </label>
+
+                    <!-- Option 2 : Bacs (avec compteur + / -) -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/50 gap-4">
+                        <div class="flex items-center gap-3.5">
+                            <span class="text-2xl">🫧</span>
+                            <div>
+                                <span class="font-bold text-slate-900 block text-base sm:text-lg">Lavage de bacs (20 $ / bac)</span>
+                                <span class="text-xs sm:text-sm text-slate-500">Poubelle, recyclage et/ou composte</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between sm:justify-end gap-4">
+                            <div class="flex items-center bg-white border border-slate-300 rounded-xl p-1 shadow-sm">
+                                <button type="button" onclick="changeBinCount(-1)" aria-label="Diminuer le nombre de bacs" class="w-9 h-9 rounded-lg bg-slate-100 hover:bg-slate-200 font-bold text-lg text-slate-700 flex items-center justify-center active:scale-95">
+                                    −
+                                </button>
+                                <span id="bin-count-display" class="w-10 text-center font-extrabold text-lg text-slate-900">0</span>
+                                <button type="button" onclick="changeBinCount(1)" aria-label="Augmenter le nombre de bacs" class="w-9 h-9 rounded-lg bg-emerald-100 hover:bg-emerald-200 font-bold text-lg text-emerald-800 flex items-center justify-center active:scale-95">
+                                    +
+                                </button>
+                            </div>
+                            <span id="bin-subtotal" class="font-extrabold text-lg sm:text-xl text-emerald-700 w-16 text-right">0 $</span>
+                        </div>
+                    </div>
+
+                    <!-- Option 3 : Déneigement -->
+                    <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 hover:border-emerald-500 cursor-pointer transition-all bg-slate-50/50">
+                        <div class="flex items-center gap-3.5">
+                            <input type="checkbox" id="calc-snow" onchange="updateEstimate()" class="w-6 h-6 rounded-lg text-emerald-600 focus:ring-emerald-500 border-slate-300 cursor-pointer">
+                            <div>
+                                <span class="font-bold text-slate-900 block text-base sm:text-lg">❄️ Déneigement résidentiel</span>
+                                <span class="text-xs sm:text-sm text-slate-500">Entrée, trottoir et escaliers</span>
+                            </div>
+                        </div>
+                        <span class="font-extrabold text-lg sm:text-xl text-emerald-700">20 $</span>
+                    </label>
+
+                    <!-- Option 4 : Gazon / Haie -->
+                    <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 hover:border-emerald-500 cursor-pointer transition-all bg-slate-50/50">
+                        <div class="flex items-center gap-3.5">
+                            <input type="checkbox" id="calc-lawn" onchange="updateEstimate()" class="w-6 h-6 rounded-lg text-emerald-600 focus:ring-emerald-500 border-slate-300 cursor-pointer">
+                            <div>
+                                <span class="font-bold text-slate-900 block text-base sm:text-lg">🌿 Tonte de gazon ou taille de haie</span>
+                                <span class="text-xs sm:text-sm text-slate-500">Tarif de base (ajusté selon grandeur/largeur sur place)</span>
+                            </div>
+                        </div>
+                        <span class="font-extrabold text-lg sm:text-xl text-emerald-700">50 $+</span>
+                    </label>
+
+                </div>
+
+                <!-- Résultat du total -->
+                <div class="mt-8 p-6 rounded-2xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-sm font-semibold text-emerald-800 uppercase tracking-wide block">Total estimé</span>
+                        <div class="flex items-baseline gap-2 mt-1">
+                            <span id="total-price" class="text-4xl sm:text-5xl font-extrabold text-emerald-900">0 $</span>
+                            <span id="variable-note" class="hidden text-xs font-semibold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">
+                                *Inclut service dès 50 $
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="transferEstimateToForm()" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-base shadow-md transition-all flex items-center justify-center gap-2">
+                        <span>Réserver cette sélection</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pourquoi nous choisir / À propos de l'équipe -->
+    <section id="equipe" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Texte de présentation -->
+            <div class="lg:col-span-6">
+                <span class="text-emerald-700 font-bold tracking-wider uppercase text-xs sm:text-sm">Qui sommes-nous ?</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    Trois jeunes entrepreneurs d'ici à votre service
+                </h2>
+                <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+                    Nous sommes <strong>Jacob Ostiguy Rondeau</strong>, <strong>Zakary Robidoux</strong> et <strong>Noah Simard</strong>. Passionnés par le travail bien fait, nous avons lancé notre petite entreprise de quartier pour offrir un coup de main fiable à nos voisins tout en développant notre sens des responsabilités et notre esprit d'entreprise.
+                </p>
+                <p class="mt-3 text-slate-600 text-base leading-relaxed">
+                    Lorsque vous faites appel à nous, vous encouragez directement la relève locale et vous obtenez un résultat propre, rapide et garanti !
+                </p>
+
+                <!-- Points forts -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 font-bold">✓</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Ponctuels et sérieux</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Nous respectons nos engagements et nos horaires.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 font-bold">✓</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Travail soigné</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Nous ne quittons pas tant que tout n'est pas propre.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 font-bold">✓</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Prix honnêtes</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Tarifs clairs annoncés avant de commencer.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 font-bold">✓</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Voisins de confiance</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Service chaleureux et respectueux de votre propriété.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cartes des 3 fondateurs -->
+            <div class="lg:col-span-6 space-y-4">
+                <!-- Fondateur 1 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-700 text-white font-extrabold text-xl flex items-center justify-center shrink-0">
+                        JO
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900">Jacob Ostiguy Rondeau</h3>
+                        <p class="text-sm text-emerald-700 font-medium">Co-fondateur • Entretien & Organisation</p>
+                        <p class="text-xs text-slate-500 mt-1">Toujours prêt à relever les manches pour un résultat impeccable.</p>
+                    </div>
+                </div>
+
+                <!-- Fondateur 2 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-700 text-white font-extrabold text-xl flex items-center justify-center shrink-0">
+                        ZR
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900">Zakary Robidoux</h3>
+                        <p class="text-sm text-sky-700 font-medium">Co-fondateur • Service client & Opérations</p>
+                        <p class="text-xs text-slate-500 mt-1">Dynamique, souriant et attentif aux besoins de chaque voisin.</p>
+                    </div>
+                </div>
+
+                <!-- Fondateur 3 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-900 font-extrabold text-xl flex items-center justify-center shrink-0">
+                        NS
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900">Noah Simard</h3>
+                        <p class="text-sm text-amber-700 font-medium">Co-fondateur • Équipement & Finition</p>
+                        <p class="text-xs text-slate-500 mt-1">Efficace et minutieux dans chaque tâche, été comme hiver.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Contact & Réservation rapide -->
+    <section id="contact" class="py-16 sm:py-24 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-emerald-700 font-bold tracking-wider uppercase text-xs sm:text-sm">Prêts à vous aider</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">Réserver un service</h2>
+                <p class="mt-3 text-slate-600 text-base">
+                    Remplissez ce formulaire rapide ou contactez-nous directement. Nous vous répondrons dans les plus brefs délais !
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Coordonnées directes (facilement modifiables) -->
+                <div class="lg:col-span-5 bg-emerald-800 text-white rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <h3 class="text-2xl font-bold">Nos coordonnées</h3>
+                        <p class="mt-2 text-emerald-100 text-sm leading-relaxed">
+                            Vous nous avez croisés lors de notre tournée de porte-à-porte ? Appelez-nous, textez-nous ou réservez en ligne !
+                        </p>
+
+                        <div class="mt-8 space-y-5">
+                            <!-- Téléphone et SMS -->
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                                    📞
+                                </div>
+                                <div class="w-full">
+                                    <span class="text-xs uppercase tracking-wider text-emerald-200 font-semibold block">Téléphone / Texto</span>
+                                    <a href="tel:5147099556" class="text-xl font-extrabold hover:text-amber-300 transition-colors block mt-0.5">
+                                        (514) 709-9556
+                                    </a>
+                                    <div class="mt-2.5 flex flex-wrap gap-2">
+                                        <a href="tel:5147099556" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-xs shadow-sm transition-colors">
+                                            <span>📞 Appeler</span>
+                                        </a>
+                                        <a href="sms:5147099556" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-white font-bold text-xs transition-colors">
+                                            <span>💬 Envoyer un SMS</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Courriel -->
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                                    ✉️
+                                </div>
+                                <div>
+                                    <span class="text-xs uppercase tracking-wider text-emerald-200 font-semibold block">Courriel</span>
+                                    <a href="mailto:prosduquartier.equipe@gmail.com" class="text-base font-bold hover:text-amber-300 transition-colors break-all">
+                                        prosduquartier.equipe@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Disponibilités -->
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                                    🕒
+                                </div>
+                                <div>
+                                    <span class="text-xs uppercase tracking-wider text-emerald-200 font-semibold block">Disponibilités</span>
+                                    <span class="text-sm font-medium text-white block">
+                                        Soirs de semaine & Fins de semaine<br>
+                                        <span class="text-emerald-200 text-xs">(Service rapide après les tempêtes de neige)</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/15">
+                        <p class="text-xs text-emerald-200">
+                            Paiement simple sur place après le travail effectué (argent comptant ou virement Interac).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Formulaire de réservation -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-9 border border-slate-200 shadow-sm">
+                    <form id="booking-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="client-name" class="block text-sm font-bold text-slate-700 mb-1.5">Votre nom complet *</label>
+                                <input type="text" id="client-name" required placeholder="Ex: Marie Tremblay" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="client-phone" class="block text-sm font-bold text-slate-700 mb-1.5">Téléphone ou Courriel *</label>
+                                <input type="text" id="client-phone" required placeholder="Ex: 514-555-1234" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="client-address" class="block text-sm font-bold text-slate-700 mb-1.5">Votre adresse dans le quartier *</label>
+                            <input type="text" id="client-address" required placeholder="Ex: 124 rue des Érables" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm">
+                        </div>
+
+                        <div>
+                            <span class="block text-sm font-bold text-slate-700 mb-2">Services souhaités :</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm">
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" id="form-leaves" name="services" value="Ramassage des feuilles (25 $)" class="w-4 h-4 text-emerald-600 rounded">
+                                    <span>🍂 Feuilles (25 $)</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" id="form-bins" name="services" value="Lavage de bacs (20 $/bac)" class="w-4 h-4 text-emerald-600 rounded">
+                                    <span>🫧 Lavage de bacs (20 $/bac)</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" id="form-snow" name="services" value="Déneigement (20 $)" class="w-4 h-4 text-emerald-600 rounded">
+                                    <span>❄️ Déneigement (20 $)</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" id="form-lawn" name="services" value="Gazon ou haie (dès 50 $)" class="w-4 h-4 text-emerald-600 rounded">
+                                    <span>🌿 Gazon / Haie (dès 50 $)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="client-message" class="block text-sm font-bold text-slate-700 mb-1.5">Détails ou disponibilités (optionnel)</label>
+                            <textarea id="client-message" rows="3" placeholder="Ex: J'ai 2 bacs à laver (poubelle et compost) et j'aimerais faire tondre l'avant..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 px-6 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-base shadow-md hover:shadow-lg transition-all active:scale-[0.99]">
+                            Envoyer ma demande à l'équipe
+                        </button>
+                    </form>
+
+                    <!-- Message de confirmation visuel (masqué par défaut) -->
+                    <div id="confirmation-box" class="hidden text-center py-8 px-4">
+                        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-3xl mx-auto mb-4">
+                            ✅
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Merci pour votre confiance !</h3>
+                        <p id="confirmation-details" class="mt-2 text-slate-600 text-sm sm:text-base max-w-md mx-auto">
+                            Votre demande a bien été enregistrée. Jacob, Zakary ou Noah vous contactera très rapidement pour confirmer notre passage.
+                        </p>
+                        <button type="button" onclick="resetBookingForm()" class="mt-6 px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm transition-colors">
+                            Faire une autre demande
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="font-bold text-white text-base">Les Pros du Quartier — Entretien Extérieur</p>
+            <p class="mt-1">Une initiative locale de <span class="text-emerald-400 font-medium">Jacob Ostiguy Rondeau, Zakary Robidoux et Noah Simard</span>.</p>
+            <p class="mt-4 text-xs text-slate-500">© 2026 Tous droits réservés. Merci d'encourager les jeunes entrepreneurs de votre voisinage !</p>
+        </div>
+    </footer>
+
+    <!-- Logique JavaScript interactive -->
+    <script>
+        // État du calculateur
+        let binCount = 0;
+
+        // Mettre à jour le nombre de bacs (minimum 0, maximum 10)
+        function changeBinCount(delta) {
+            binCount = Math.max(0, Math.min(10, binCount + delta));
+            document.getElementById('bin-count-display').textContent = binCount;
+            document.getElementById('bin-subtotal').textContent = (binCount * 20) + ' $';
+            updateEstimate();
+        }
+
+        // Calculer et afficher le total estimé
+        function updateEstimate() {
+            let total = 0;
+            const hasLeaves = document.getElementById('calc-leaves').checked;
+            const hasSnow = document.getElementById('calc-snow').checked;
+            const hasLawn = document.getElementById('calc-lawn').checked;
+
+            if (hasLeaves) total += 25;
+            total += binCount * 20;
+            if (hasSnow) total += 20;
+            if (hasLawn) total += 50;
+
+            document.getElementById('total-price').textContent = total + ' $';
+
+            const variableNote = document.getElementById('variable-note');
+            if (hasLawn) {
+                variableNote.classList.remove('hidden');
+            } else {
+                variableNote.classList.add('hidden');
+            }
+        }
+
+        // Ajouter un service directement depuis les cartes de tarifs
+        function selectServiceFromCard(serviceType) {
+            if (serviceType === 'leaves') {
+                document.getElementById('calc-leaves').checked = true;
+            } else if (serviceType === 'bins') {
+                changeBinCount(1);
+            } else if (serviceType === 'snow') {
+                document.getElementById('calc-snow').checked = true;
+            } else if (serviceType === 'lawn') {
+                document.getElementById('calc-lawn').checked = true;
+            }
+            updateEstimate();
+
+            // Défilement fluide vers le calculateur
+            document.getElementById('calculateur').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Transférer les choix du calculateur vers le formulaire de contact
+        // Gestion de la soumission du formulaire avec confirmation visuelle et envoi courriel pré-rempli
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('client-name').value.trim();
+            const phone = document.getElementById('client-phone').value.trim();
+            const address = document.getElementById('client-address').value.trim();
+            const details = document.getElementById('client-message').value.trim();
+
+            // Récupérer les services cochés
+            const checkedServices = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+                .map(cb => `- ${cb.value}`);
+
+            // Construire le sujet et le corps du courriel vers prosduquartier.equipe@gmail.com
+            const subject = encodeURIComponent(`Demande de service - ${name} (${address})`);
+            const bodyLines = [
+                `Bonjour Jacob, Zakary et Noah,`,
+                ``,
+                `Voici ma demande de service :`,
+                `• Nom : ${name}`,
+                `• Téléphone / Courriel : ${phone}`,
+                `• Adresse : ${address}`,
+                ``,
+                `Services demandés :`,
+                checkedServices.length > 0 ? checkedServices.join('\n') : `- À préciser`,
+                ``,
+                details ? `Détails supplémentaires :\n${details}` : ``
+            ];
+            const body = encodeURIComponent(bodyLines.join('\n'));
+
+            // Ouvrir l'application courriel du client avec le message prêt à envoyer
+            window.location.href = `mailto:prosduquartier.equipe@gmail.com?subject=${subject}&body=${body}`;
+
+            const confirmationDetails = document.getElementById('confirmation-details');
+            confirmationDetails.innerHTML = `Merci <strong>${escapeHTML(name)}</strong> ! Votre demande pour le <strong>${escapeHTML(address)}</strong> est prête à être envoyée à <strong>prosduquartier.equipe@gmail.com</strong>. Jacob, Zakary ou Noah vous contactera très rapidement.`;
+
+            document.getElementById('booking-form').classList.add('hidden');
+            document.getElementById('confirmation-box').classList.remove('hidden');
+        }
+
+        // Réinitialiser le formulaire
+        function resetBookingForm() {
+            document.getElementById('booking-form').reset();
+            document.getElementById('confirmation-box').classList.add('hidden');
+            document.getElementById('booking-form').classList.remove('hidden');
+        }
+
+        // Utilitaire pour sécuriser l'affichage du texte saisi
+        function escapeHTML(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
